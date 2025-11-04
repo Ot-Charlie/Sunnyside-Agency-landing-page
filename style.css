@@ -4,7 +4,9 @@
   box-sizing: border-box;
   /* font-family: 'Poppins', sans-serif; */
 }
-
+#menu-icon {
+  display: none;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -246,6 +248,111 @@ footer {
     gap: 30px;
   }
   .thomas {
-    margin-top: 26px;
+    margin-top: 26px; /* because of space, thomas' name goes lower than others*/
+  }
+}
+@media (max-width: 426px) {
+  #menu-icon {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 22px;
+  }
+  .header-section nav {
+    display: none;
+    position: absolute;
+    margin-top: 430px; /* Below the header */
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+    width: 85%;
+    max-width: 400px;
+    z-index: 10001;
+  }
+  .header-section nav li {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .header-section nav::before {
+    content: "";
+    position: absolute;
+    top: -20px; /* Positions it above the menu */
+    right: 0; /* Distance from right edge */
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid white; /* Points upward, matches nav background */
+  }
+  .header-section nav.menu-open {
+    display: block;
+  }
+  .header-section nav ul {
+    flex-direction: column;
+    background-color: hsl(0, 100%, 100%);
+    padding: 50px;
+    gap: 20px;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: relative; /* Ensures ul is the reference point */
+  }
+  nav a {
+    color: hsl(232, 10%, 55%);
+    text-decoration: none;
+    display: block;
+  }
+  .contact-btn {
+    color: hsl(212, 27%, 19%);
+    background-color: hsl(51, 100%, 49%);
+  }
+  .what-we-do {
+    grid-template-columns: 1fr;
+  }
+  .testimonials {
+    flex-direction: column;
+    margin: 50px 0;
+    justify-content: space-evenly;
+  }
+
+  .text-block {
+    padding: 40px 0;
+  }
+  h2 {
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .text-block p {
+    text-align: center;
+    max-width: 330px;
+  }
+  .learn-one,
+  .learn-two {
+    padding-top: 20px;
+  }
+  .cherry-pick,
+  .orange-pick {
+    padding-bottom: 100px;
+  }
+  .cherry-pick p,
+  .orange-pick p {
+    max-width: 380px;
+  }
+  h3 {
+    margin-top: 50px;
+  }
+  .testimonial img {
+    width: 20%;
+  }
+  .testimonials p {
+    margin: 0 auto;
+    max-width: 290px;
+  }
+  h4 {
+    margin-top: 25px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
   }
 }
