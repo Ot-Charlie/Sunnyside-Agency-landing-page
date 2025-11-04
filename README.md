@@ -40,7 +40,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Ot-Charlie/Sunnyside-Agency-landing-page)
+- Solution URL:(https://github.com/Ot-Charlie/Sunnyside-Agency-landing-page)
 - Live Site URL:(https://ot-charlie.github.io/Sunnyside-Agency-landing-page/)
 
 ## My process
